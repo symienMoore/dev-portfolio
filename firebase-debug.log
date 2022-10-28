@@ -1,0 +1,76 @@
+[debug] [2022-10-28T00:10:10.051Z] ----------------------------------------------------------------------
+[debug] [2022-10-28T00:10:10.053Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2022-10-28T00:10:10.054Z] CLI Version:   11.15.0
+[debug] [2022-10-28T00:10:10.054Z] Platform:      darwin
+[debug] [2022-10-28T00:10:10.054Z] Node Version:  v16.17.0
+[debug] [2022-10-28T00:10:10.063Z] Time:          Thu Oct 27 2022 20:10:10 GMT-0400 (Eastern Daylight Time)
+[debug] [2022-10-28T00:10:10.063Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-28T00:10:10.124Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-28T00:10:10.125Z] > authorizing via signed-in user (symien.moore@gmail.com)
+[debug] [2022-10-28T00:10:10.125Z] [iam] checking project portfolio-d4a42 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-10-28T00:10:10.128Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-d4a42:testIamPermissions [none]
+[debug] [2022-10-28T00:10:10.129Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-d4a42:testIamPermissions x-goog-quota-user=projects/portfolio-d4a42
+[debug] [2022-10-28T00:10:10.129Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-d4a42:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-10-28T00:10:10.288Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-d4a42:testIamPermissions 200
+[debug] [2022-10-28T00:10:10.288Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-d4a42:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-10-28T00:10:10.289Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-d4a42 [none]
+[debug] [2022-10-28T00:10:10.742Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-d4a42 200
+[debug] [2022-10-28T00:10:10.742Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-d4a42 {"projectId":"portfolio-d4a42","projectNumber":"1011243911013","displayName":"portfolio","name":"projects/portfolio-d4a42","resources":{"hostingSite":"portfolio-d4a42","storageBucket":"portfolio-d4a42.appspot.com","locationId":"us-east4"},"state":"ACTIVE","etag":"1_9072b2a1-300b-45d3-963e-85a16cd80d90"}
+[debug] [2022-10-28T00:10:12.414Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/portfolio-d4a42/sites pageToken=&pageSize=10
+[debug] [2022-10-28T00:10:13.030Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/portfolio-d4a42/sites 200
+[debug] [2022-10-28T00:10:13.030Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/portfolio-d4a42/sites {"sites":[{"name":"projects/portfolio-d4a42/sites/portfolio-d4a42","defaultUrl":"https://portfolio-d4a42.web.app","appId":"1:1011243911013:web:c8bd06fcc05fd1d647838c","type":"DEFAULT_SITE"}]}
+[debug] [2022-10-28T00:10:13.031Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1011243911013:web:c8bd06fcc05fd1d647838c/config [none]
+[debug] [2022-10-28T00:10:13.813Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1011243911013:web:c8bd06fcc05fd1d647838c/config 200
+[debug] [2022-10-28T00:10:13.813Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1011243911013:web:c8bd06fcc05fd1d647838c/config {"projectId":"portfolio-d4a42","appId":"1:1011243911013:web:c8bd06fcc05fd1d647838c","storageBucket":"portfolio-d4a42.appspot.com","locationId":"us-east4","apiKey":"AIzaSyCCbpF6pT2uXjYrPv0R6iCI6hJ0cYQYTKA","authDomain":"portfolio-d4a42.firebaseapp.com","messagingSenderId":"1011243911013"}
+[debug] [2022-10-28T00:10:19.133Z] Error: Next.js requires React 18.2.0 to be installed.
+    at Object.getBaseWebpackConfig [as default] (/Users/symienmoore/projects/dev-portfolio/node_modules/next/dist/build/webpack-config.js:59:19)
+    at async Promise.all (index 0)
+    at async Span.traceAsyncFn (/Users/symienmoore/projects/dev-portfolio/node_modules/next/dist/trace/trace.js:79:20)
+    at async /Users/symienmoore/projects/dev-portfolio/node_modules/next/dist/build/index.js:449:33
+    at async /Users/symienmoore/projects/dev-portfolio/node_modules/next/dist/build/index.js:433:13
+    at async Span.traceAsyncFn (/Users/symienmoore/projects/dev-portfolio/node_modules/next/dist/trace/trace.js:79:20)
+    at async build (/Users/symienmoore/projects/dev-portfolio/node_modules/next/dist/build/index.js:64:29)
+    at async build (/usr/local/lib/node_modules/firebase-tools/lib/frameworks/next/index.js:33:5)
+    at async prepareFrameworks (/usr/local/lib/node_modules/firebase-tools/lib/frameworks/index.js:239:93)
+    at async deploy (/usr/local/lib/node_modules/firebase-tools/lib/deploy/index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-10-28T00:11:31.379Z] ----------------------------------------------------------------------
+[debug] [2022-10-28T00:11:31.381Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2022-10-28T00:11:31.381Z] CLI Version:   11.15.0
+[debug] [2022-10-28T00:11:31.381Z] Platform:      darwin
+[debug] [2022-10-28T00:11:31.381Z] Node Version:  v16.17.0
+[debug] [2022-10-28T00:11:31.382Z] Time:          Thu Oct 27 2022 20:11:31 GMT-0400 (Eastern Daylight Time)
+[debug] [2022-10-28T00:11:31.383Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-28T00:11:31.444Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-28T00:11:31.445Z] > authorizing via signed-in user (symien.moore@gmail.com)
+[debug] [2022-10-28T00:11:31.445Z] [iam] checking project portfolio-d4a42 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-10-28T00:11:31.447Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-d4a42:testIamPermissions [none]
+[debug] [2022-10-28T00:11:31.447Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-d4a42:testIamPermissions x-goog-quota-user=projects/portfolio-d4a42
+[debug] [2022-10-28T00:11:31.447Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-d4a42:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-10-28T00:11:31.591Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-d4a42:testIamPermissions 200
+[debug] [2022-10-28T00:11:31.591Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-d4a42:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-10-28T00:11:31.592Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-d4a42 [none]
+[debug] [2022-10-28T00:11:32.153Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-d4a42 200
+[debug] [2022-10-28T00:11:32.153Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-d4a42 {"projectId":"portfolio-d4a42","projectNumber":"1011243911013","displayName":"portfolio","name":"projects/portfolio-d4a42","resources":{"hostingSite":"portfolio-d4a42","storageBucket":"portfolio-d4a42.appspot.com","locationId":"us-east4"},"state":"ACTIVE","etag":"1_9072b2a1-300b-45d3-963e-85a16cd80d90"}
+[debug] [2022-10-28T00:11:33.839Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/portfolio-d4a42/sites pageToken=&pageSize=10
+[debug] [2022-10-28T00:11:34.265Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/portfolio-d4a42/sites 200
+[debug] [2022-10-28T00:11:34.266Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/portfolio-d4a42/sites {"sites":[{"name":"projects/portfolio-d4a42/sites/portfolio-d4a42","defaultUrl":"https://portfolio-d4a42.web.app","appId":"1:1011243911013:web:c8bd06fcc05fd1d647838c","type":"DEFAULT_SITE"}]}
+[debug] [2022-10-28T00:11:34.266Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1011243911013:web:c8bd06fcc05fd1d647838c/config [none]
+[debug] [2022-10-28T00:11:34.916Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1011243911013:web:c8bd06fcc05fd1d647838c/config 200
+[debug] [2022-10-28T00:11:34.916Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1011243911013:web:c8bd06fcc05fd1d647838c/config {"projectId":"portfolio-d4a42","appId":"1:1011243911013:web:c8bd06fcc05fd1d647838c","storageBucket":"portfolio-d4a42.appspot.com","locationId":"us-east4","apiKey":"AIzaSyCCbpF6pT2uXjYrPv0R6iCI6hJ0cYQYTKA","authDomain":"portfolio-d4a42.firebaseapp.com","messagingSenderId":"1011243911013"}
+[debug] [2022-10-28T00:11:39.059Z] Error: Next.js requires React 18.2.0 to be installed.
+    at Object.getBaseWebpackConfig [as default] (/Users/symienmoore/projects/dev-portfolio/node_modules/next/dist/build/webpack-config.js:59:19)
+    at async Promise.all (index 0)
+    at async Span.traceAsyncFn (/Users/symienmoore/projects/dev-portfolio/node_modules/next/dist/trace/trace.js:79:20)
+    at async /Users/symienmoore/projects/dev-portfolio/node_modules/next/dist/build/index.js:449:33
+    at async /Users/symienmoore/projects/dev-portfolio/node_modules/next/dist/build/index.js:433:13
+    at async Span.traceAsyncFn (/Users/symienmoore/projects/dev-portfolio/node_modules/next/dist/trace/trace.js:79:20)
+    at async build (/Users/symienmoore/projects/dev-portfolio/node_modules/next/dist/build/index.js:64:29)
+    at async build (/usr/local/lib/node_modules/firebase-tools/lib/frameworks/next/index.js:33:5)
+    at async prepareFrameworks (/usr/local/lib/node_modules/firebase-tools/lib/frameworks/index.js:239:93)
+    at async deploy (/usr/local/lib/node_modules/firebase-tools/lib/deploy/index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.
