@@ -9,6 +9,7 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
+import Footer from '../components/Footer';
 
 const queryClient = new QueryClient()
 export default function App({ Component, pageProps }: AppProps) {
@@ -17,6 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <QueryClientProvider client={queryClient}>
         <Navbar />
         <Component {...pageProps} />
+        <Footer />
       </QueryClientProvider>
     </>
   )
